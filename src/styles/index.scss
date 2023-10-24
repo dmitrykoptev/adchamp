@@ -1,0 +1,105 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "./variables.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.25%;
+  font-family: $motserrat-font;
+}
+
+body {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  margin-top: 6rem !important;
+}
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 4fr 3fr;
+}
+
+.carousel {
+  grid-area: 1/1/4/2;
+}
+
+.gallery {
+  grid-area: 4/1/5/2;
+}
+
+.title {
+  grid-area: 1/2/2/3;
+}
+.sizes {
+  grid-area: 2/2/4/3;
+}
+.cta {
+  grid-area: 4/2/5/3;
+}
+
+@include respond(big-desktop) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@include respond(tab-land) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@include respond(tab-port) {
+  html {
+    font-size: 54%;
+  }
+}
+
+@include respond(phone) {
+  html {
+    font-size: 62.25%;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel {
+    order: 1;
+  }
+
+  .gallery {
+    order: 3;
+    margin: 0 2.1rem;
+  }
+
+  .title {
+    order: 2;
+    margin: 1rem 0;
+  }
+  .sizes {
+    order: 4;
+  }
+  .cta {
+    order: 5;
+  }
+}

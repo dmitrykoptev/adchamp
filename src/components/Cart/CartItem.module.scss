@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.cartItem {
+  display: flex;
+  gap: 2rem;
+
+  img {
+    height: 8rem;
+  }
+}
+
+.info {
+  height: 7.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  p {
+    font-size: $font-size-medium;
+    font-weight: 600;
+  }
+
+  span {
+    margin-left: 1rem;
+    font-weight: 200;
+  }
+}
+
+@include respond(phone) {
+  .info {
+    p {
+      font-size: $font-size-small;
+    }
+
+    span {
+      font-weight: 400;
+      margin-left: 0.6rem;
+    }
+  }
+}

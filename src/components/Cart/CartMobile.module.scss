@@ -1,0 +1,77 @@
+@import "../../styles/variables.scss";
+
+.cart {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 10;
+}
+
+.container {
+  height: calc(100vh - 6rem);
+  padding: 1rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h2 {
+    font-size: $font-size-large;
+    font-weight: 600;
+  }
+}
+
+.itemList {
+  height: 100%;
+  list-style: none;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: scroll;
+}
+
+.modalFooter {
+  .estimated {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font-size: $font-size-large;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+  }
+  p {
+    margin-top: 1.2rem;
+    padding: 0 3.2rem;
+    font-size: $font-size-small;
+    text-align: center;
+    text-decoration: underline;
+  }
+}
+
+.cartOpen {
+  animation: openCart 0.25s;
+}
+.cartClose {
+  animation: closeCart 0.25s;
+}
+
+@keyframes openCart {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes closeCart {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

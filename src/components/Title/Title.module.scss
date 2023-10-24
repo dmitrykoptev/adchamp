@@ -1,0 +1,102 @@
+@import "../../styles/variables.scss";
+
+h1 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: $font-size-extralarge;
+  font-weight: 700;
+}
+
+.price {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  .previous {
+    font-size: $font-size-extralarge;
+    text-decoration: line-through;
+    font-weight: 300;
+  }
+
+  .current {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  .discount {
+    height: 4rem;
+    width: 20rem;
+    padding-left: 1rem;
+    background-color: $color-orange;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 85% 50%, 100% 0%);
+
+    color: $color-white;
+    font-size: $font-size-extralarge;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+  }
+}
+
+@include respond(tab-land) {
+  h1 {
+    font-weight: 600;
+  }
+
+  .price {
+    row-gap: 1.2rem;
+
+    .previous {
+      font-size: $font-size-large;
+    }
+
+    .current {
+      font-size: $font-size-extralarge;
+      font-weight: 800;
+    }
+
+    .discount {
+      height: 3rem;
+      width: 16rem;
+      font-size: $font-size-large;
+      font-weight: 600;
+    }
+  }
+}
+
+@include respond(tab-land) {
+  h1 {
+    font-size: $font-size-large;
+  }
+}
+
+@include respond(phone) {
+  h1 {
+    margin: 1rem 0 0 0;
+    font-size: $font-size-medium;
+    font-weight: 700;
+    line-height: 3.4rem;
+  }
+
+  .price {
+    gap: 1.6rem;
+
+    .previous {
+      font-size: $font-size-medium;
+    }
+
+    .current {
+      font-size: $font-size-extralarge;
+      font-weight: 700;
+    }
+
+    .discount {
+      height: 2.8rem;
+      width: 8.3rem;
+      font-size: $font-size-small;
+      font-weight: 600;
+      padding-left: 0.4rem;
+    }
+  }
+}

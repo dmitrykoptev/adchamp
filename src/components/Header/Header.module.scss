@@ -1,0 +1,65 @@
+@import "../../styles/variables.scss";
+
+.header {
+  width: 100vw;
+  height: 6rem;
+  background-color: $color-black;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoSide {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  img {
+    height: 2.6rem;
+  }
+}
+
+.menuIcon {
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+
+  &--burger {
+    background: url(../../assets/icons/burger.svg) no-repeat center;
+  }
+
+  &--close {
+    background: url(../../assets/icons/close.svg) no-repeat center;
+  }
+
+  &--cart {
+    background: url(../../assets/icons/cart.svg) no-repeat center;
+  }
+}
+
+.cartCount {
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 50%;
+  background-color: $color-white;
+  color: $color-black;
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

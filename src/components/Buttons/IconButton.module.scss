@@ -1,0 +1,14 @@
+.iconButton {
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,79 @@
+@import "../../styles/variables.scss";
+
+.sizes {
+  padding: 2rem 0;
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font-size: $font-size-large;
+
+      &.guide {
+        text-decoration: underline;
+        color: $color-grey-dark;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
+  }
+
+  &-list {
+    list-style: none;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.6rem;
+
+    .size {
+      padding: 1rem 0;
+      background-color: $color-grey-light;
+      border: 1px solid $color-grey-dark;
+      border-radius: 1rem;
+      color: $color-black;
+      font-size: $font-size-medium;
+      text-align: center;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-grey-medium;
+      }
+    }
+  }
+}
+
+@include respond(tab-port) {
+  .sizes {
+    &-title {
+      span {
+        font-size: $font-size-medium;
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .sizes {
+    padding: 0;
+    margin-top: 2.4rem;
+    margin-bottom: 1rem;
+
+    &-title {
+      span {
+        font-size: $font-size-small;
+      }
+    }
+
+    &-list {
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 1.4rem;
+      grid-column-gap: 2.1rem;
+    }
+  }
+}
